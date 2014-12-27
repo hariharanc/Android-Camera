@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rrPreview"
+        android:layout_width="fill_parent"
+        android:layout_height="300dp"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:id="@+id/camera_preview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="visible" />
+
+        
+
+        <TextView
+            android:id="@+id/txtUse"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:text="Use"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/txtFlash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="20dp"
+            android:text="Flash"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/txtFace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingRight="20dp"
+            android:text="Face"
+            android:textColor="#FFFFFF" />
+
+       
+        <ImageView
+            android:id="@+id/imgCapture"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/click_to_shoot" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="fill_parent"
+        android:layout_height="300dp"
+        android:layout_below="@+id/rrPreview"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_launcher"
+        android:visibility="gone" />
+
+    <GridView
+        android:id="@+id/grid"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:columnWidth="10dp"
+        android:gravity="center"
+        android:horizontalSpacing="10dp"
+        android:numColumns="3"
+        android:scrollingCache="false"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp" />
+
+</LinearLayout>
